@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZyphonOS — AI Solutions for Nigerian Businesses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:#0a0a0f;color:#e4e4e7;line-height:1.6;overflow-x:hidden}
+    .bg-grid{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(167,139,250,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(167,139,250,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}
+    .section{padding:100px 0;position:relative;z-index:1}
+    .badge{display:inline-block;background:rgba(167,139,250,0.12);color:#a78bfa;font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:100px;border:1px solid rgba(167,139,250,0.2);margin-bottom:16px;letter-spacing:.5px}
+    nav{position:fixed;top:0;left:0;width:100%;background:rgba(10,10,15,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06);z-index:100;padding:16px 0}
+    nav .container{display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:800;font-size:1.3rem;color:#fff;letter-spacing:-.5px}
+    .logo span{color:#a78bfa}.nav-links{display:flex;gap:32px;list-style:none}
+    .nav-links a{color:#a1a1aa;font-size:.9rem;font-weight:500;transition:color .2s}
+    .nav-links a:hover{color:#fff}
+    .hero{min-height:100vh;display:flex;align-items:center;position:relative;z-index:1;padding-top:80px}
+    .hero-content{max-width:720px}
+    .hero-greeting{font-size:.95rem;color:#a78bfa;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+    .hero h1{font-size:3.5rem;font-weight:800;line-height:1.1;letter-spacing:-2px;color:#fff;margin-bottom:24px}
+    .hero h1 span{background:linear-gradient(135deg,#a78bfa,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{font-size:1.1rem;color:#a1a1aa;max-width:580px;margin-bottom:40px;line-height:1.7}
+    .hero-stats{display:flex;gap:48px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.06)}
+    .hero-stat h3{font-size:1.5rem;font-weight:800;color:#fff}
+    .hero-stat p{font-size:.85rem;color:#71717a;margin:0}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:12px;font-weight:600;font-size:.95rem;transition:all .25s;cursor:pointer;border:none;text-decoration:none}
+    .btn-primary{background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;box-shadow:0 4px 20px rgba(124,58,237,0.3)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(124,58,237,0.4)}
+    .btn-secondary{background:rgba(255,255,255,0.06);color:#e4e4e7;border:1px solid rgba(255,255,255,0.1)}
+    .btn-secondary:hover{background:rgba(255,255,255,0.1);transform:translateY(-2px)}
+    .section-title{font-size:2.2rem;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-1px}
+    .section-subtitle{color:#71717a;font-size:1rem;margin-bottom:48px}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+    .service-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:32px;transition:all .3s}
+    .service-card:hover{border-color:rgba(167,139,250,0.2);transform:translateY(-4px)}
+    .service-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px;background:rgba(167,139,250,0.1);color:#a78bfa}
+    .service-card h3{color:#fff;font-size:1.15rem;margin-bottom:10px}
+    .service-card p{color:#71717a;font-size:.9rem;line-height:1.6;margin-bottom:16px}
+    .service-price{color:#a78bfa;font-weight:700;font-size:.95rem}
+    .process-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}
+    .process-step{text-align:center;padding:32px}
+    .process-step .num{width:48px;height:48px;border-radius:50%;background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-weight:800;color:#a78bfa;font-size:1.2rem}
+    .process-step h4{color:#fff;margin-bottom:8px}
+    .process-step p{color:#71717a;font-size:.85rem}
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+    .pricing-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:36px;text-align:center;transition:all .3s}
+    .pricing-card.featured{border-color:rgba(167,139,250,0.3);background:rgba(167,139,250,0.05)}
+    .pricing-card h3{color:#fff;font-size:1.2rem;margin-bottom:8px}
+    .pricing-card .price{font-size:2.5rem;font-weight:800;color:#fff;margin:16px 0}
+    .pricing-card .price span{font-size:1rem;color:#71717a;font-weight:400}
+    .pricing-card ul{list-style:none;margin:24px 0;text-align:left}
+    .pricing-card ul li{padding:8px 0;color:#a1a1aa;font-size:.9rem;display:flex;align-items:center;gap:10px}
+    .pricing-card ul li::before{content:"\2713";color:#a78bfa;font-weight:700}
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+    .contact-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:24px;text-align:center;transition:all .25s;text-decoration:none;color:inherit;display:block}
+    .contact-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(167,139,250,0.2)}
+    .contact-card h4{color:#fff;margin-bottom:6px}
+    .contact-card p{color:#71717a;font-size:.85rem}
+    .how-it-works{background:rgba(255,255,255,0.02);border-radius:20px;padding:60px;border:1px solid rgba(255,255,255,0.04)}
+    .disclaimer{background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.1);border-radius:12px;padding:20px;margin-top:24px;font-size:.85rem;color:#a1a1aa}
+    .disclaimer strong{color:#fbbf24}
+    footer{border-top:1px solid rgba(255,255,255,0.06);padding:32px 0;text-align:center;color:#52525b;font-size:.85rem;position:relative;z-index:1}
+    @media(max-width:768px){.hero h1{font-size:2.2rem}.hero-stats{flex-wrap:wrap;gap:24px}.nav-links{display:none}.how-it-works{padding:32px}}
+  </style>
+</head>
+<body>
+<div class="bg-grid"></div>
+<nav>
+  <div class="container">
+    <div class="logo">ZyphonOS<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-greeting">AI-Powered Solutions for Nigerian Businesses</div>
+    <h1>You need software. <span>I deliver it.</span> Fast, without the tech headache.</h1>
+    <p>
+      I build custom software solutions for Nigerian businesses using advanced AI systems.
+      You describe the problem. I handle the technology. You get working results — no coding knowledge needed.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <h3>AI-Powered</h3>
+        <p>I use the best AI tools to build faster</p>
+      </div>
+      <div class="hero-stat">
+        <h3>You Talk to a Human</h3>
+        <p>Real person. Real communication. Real results.</p>
+      </div>
+      <div class="hero-stat">
+        <h3>Lagos-Based</h3>
+        <p>Understanding Nigerian business needs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <span class="badge">What I Build</span>
+    <h2 class="section-title">Software Solutions</h2>
+    <p class="section-subtitle">Each service is a complete, working solution delivered to you.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🕸️</div>
+        <h3>Web Scraping & Data Extraction</h3>
+        <p>Extract data from any website — competitor prices, product listings, contact info, market research. Delivered as CSV or JSON.</p>
+        <div class="service-price">From $30</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔗</div>
+        <h3>API Integration</h3>
+        <p>Connect your business tools. Sync inventory across platforms. Automate order processing. Link payment gateways.</p>
+        <div class="service-price">From $50</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Data Processing & Cleaning</h3>
+        <p>Clean messy spreadsheets. Merge data from multiple sources. Generate reports. Prepare data for analysis.</p>
+        <div class="service-price">From $20</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AI Chatbots & Assistants</h3>
+        <p>Customer support chatbot for your website. FAQ automation. Lead qualification. Works in English and Pidgin.</p>
+        <div class="service-price">From $100</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Business Automation</h3>
+        <p>Automate repetitive tasks. Invoice generation. Email campaigns. Inventory alerts. Report scheduling.</p>
+        <div class="service-price">From $50</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Custom Web Apps</h3>
+        <p>Simple web applications for your business — booking systems, client portals, dashboards, catalog sites.</p>
+        <div class="service-price">From $150</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container">
+    <span class="badge">Simple Process</span>
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">No tech jargon. No complicated onboarding.</p>
+    <div class="how-it-works">
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="num">1</div>
+          <h4>Tell Me Your Problem</h4>
+          <p>WhatsApp or email me what you need. "I want to extract product prices from Jumia." "I need a system to track my inventory."</p>
+        </div>
+        <div class="process-step">
+          <div class="num">2</div>
+          <h4>I Give You a Price</h4>
+          <p>I review your request and give you a fixed price. No hidden fees. No hourly tracking. You know the cost upfront.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">3</div>
+          <h4>I Build It</h4>
+          <p>I use my AI systems to build your solution. This usually takes hours, not days. I send you progress updates.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">4</div>
+          <h4>You Get the Result</h4>
+          <p>Working solution delivered. One free revision included. You only pay when you're satisfied.</p>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <strong>Honest disclaimer:</strong> I build using AI coding systems. This lets me deliver faster and cheaper than traditional developers. You get the speed of AI with the accountability of a real person who understands your business.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <span class="badge">Transparent Pricing</span>
+    <h2 class="section-title">Fixed Prices, No Surprises</h2>
+    <p class="section-subtitle">You know exactly what you're paying before I start.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Quick Fix</h3>
+        <div class="price">$20<span> / task</span></div>
+        <ul>
+          <li>Data extraction (small)</li>
+          <li>File conversion</li>
+          <li>Simple script</li>
+          <li>Delivery in 24h</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center">Order Now</a>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Standard Build</h3>
+        <div class="price">$100<span> / project</span></div>
+        <ul>
+          <li>API integration</li>
+          <li>Web scraper</li>
+          <li>Data pipeline</li>
+          <li>AI chatbot (basic)</li>
+          <li>Delivery in 3 days</li>
+          <li>1 revision</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center">Most Popular</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Full System</h3>
+        <div class="price">$250<span> / project</span></div>
+        <ul>
+          <li>Full web application</li>
+          <li>Custom automation</li>
+          <li>Database + API</li>
+          <li>Deployment support</li>
+          <li>Delivery in 7 days</li>
+          <li>2 revisions</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center">Order Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <span class="badge">Get In Touch</span>
+    <h2 class="section-title">Tell Me What You Need</h2>
+    <p class="section-subtitle">I respond within 2 hours. Let's get your solution built.</p>
+    <div class="contact-grid">
+      <a href="mailto:Zyphon.os.you@gmail.com" class="contact-card">
+        <h4>Email</h4>
+        <p>Zyphon.os.you@gmail.com</p>
+      </a>
+      <a href="https://wa.me/2349160338378" target="_blank" class="contact-card">
+        <h4>WhatsApp</h4>
+        <p>Fastest response — click to chat</p>
+      </a>
+      <a href="https://x.com/ebvkaar" target="_blank" class="contact-card">
+        <h4>X / Twitter</h4>
+        <p>@ebvkaar</p>
+      </a>
+      <a href="https://zyphonos.github.io" target="_blank" class="contact-card">
+        <h4>Portfolio</h4>
+        <p>See my work</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>ZyphonOS — Lagos, Nigeria. Building solutions for Nigerian businesses.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+  const o=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.1});
+  document.querySelectorAll('.section .container > *').forEach((e,i)=>{e.style.opacity='0';e.style.transform='translateY(20px)';e.style.transition=`opacity .6s ease ${i*.05}s, transform .6s ease ${i*.05}s`;o.observe(e)});
+  document.querySelectorAll('.hero-content > *').forEach((e,i)=>{e.style.opacity='0';e.style.transform='translateY(20px)';e.style.transition=`opacity .8s ease ${.1+i*.1}s, transform .8s ease ${.1+i*.1}s`;setTimeout(()=>{e.style.opacity='1';e.style.transform='translateY(0)'},100)});
+</script>
+</body>
+</html>
