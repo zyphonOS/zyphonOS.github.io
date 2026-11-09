@@ -1,53 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found — ZyphonOS ecosystem</title>
+<title>Page not found</title>
+<meta name="description" content="That page does not exist.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/syne-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Page not found">
+<meta property="og:description" content="That page does not exist.">
+<meta property="og:type" content="website">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#080A09">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
 </head>
-<body data-p="ecosystem">
-<a class="skip" href="#main">Skip to content</a>
-
-<header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="/"><span class="dot"></span>ZyphonOS<span class="muted" style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase">ecosystem</span></a>
-    <nav class="nav" aria-label="Primary" style="display:block">
-      <ul>
-        <li><a href="/vision.html">Vision</a></li>
-        <li><a href="/ecosystem.html">Ecosystem</a></li>
-        <li><a href="/work.html">Work</a></li>
-        <li><a href="/participate.html">Participate</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="mark" href="index.html">Zyphonos</a>
+    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="ecosystem.html">Ecosystem</a><a href="work.html">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a>
+      <a class="btn" href="contact.html">Contact</a>
     </nav>
   </div>
-</header>
-
-<main id="main">
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">404</p>
-      <h1>This page does not exist.</h1>
-      <p class="lede">The link is broken, or the page moved. Nothing was lost — it was never here.</p>
-      <div class="cta-row mt-3">
-        <a class="btn btn-primary" href="/">Go to the front door <span class="arrow">→</span></a>
-        <a class="btn btn-ghost" href="/ecosystem.html">See the participants</a>
-      </div>
-    </div>
+</header><main id="main">
+  <section class="wrap hero">
+    <p class="label hero__label">404</p>
+    <h1 class="display" style="max-width:14ch">That page does not exist.</h1>
+    <p class="lead">It may have moved. The four participants and the relationship register are the
+    only structure this site promises.</p>
+    <p style="margin-top:32px"><a class="link" href="index.html">Back to the front door &rarr;</a></p>
   </section>
 </main>
 
-<footer class="site-foot">
+<footer class="foot">
   <div class="wrap">
-    <div class="foot-base" style="margin-top:0;border-top:0">
-      <span>© <span id="yr">2026</span> ZyphonOS ecosystem.</span>
-      <span>Lagos, Nigeria</span>
+    <div class="foot__grid">
+      <div>
+        <span class="label">This site</span>
+        <p class="caption">Four independent participants, one front door. ZyphonOS maintains this
+        site and does not own the participants. Every relationship is labelled with the word that
+        is legally true.</p>
+        <div class="legend">
+          <div><strong>Manages</strong><p>By agreement, revocable, scoped. Never ownership.</p></div>
+          <div><strong>Aligned</strong><p>Shared intent, one front door. No equity implied.</p></div>
+          <div><strong>Independent</strong><p>Self-owned. Keeps its own name and its own money.</p></div>
+        </div>
+      </div>
+      <div>
+        <span class="label">Pages</span>
+        <ul><li><a href="index.html">Home</a></li><li><a href="ecosystem.html">Ecosystem</a></li><li><a href="zyphonos.html">ZyphonOS</a></li><li><a href="pikkaio.html">Pikkaio</a></li><li><a href="willwired.html">WillWired</a></li><li><a href="ebvka.html">EBVKA</a></li><li><a href="work.html">Work</a></li><li><a href="vision.html">Vision</a></li><li><a href="participate.html">Participate</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <span class="label">Contact</span>
+        <ul>
+          <li><a href="contact.html">Contact routes</a></li>
+          <li class="caption" style="margin-top:12px">Pikkaio and WillWired have published
+          addresses. ZyphonOS and EBVKA enquiries are handled by Pikkaio until their own addresses
+          are confirmed.</li>
+        </ul>
+      </div>
     </div>
+    <hr class="rule" style="margin:48px 0 24px">
+    <p class="caption">Built 2026-11-09. No claim on this site is a forecast. Where something does not
+    exist yet, the page says so.</p>
   </div>
 </footer>
+<script src="nav.js" defer></script>
 </body>
 </html>

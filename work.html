@@ -1,232 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Work &amp; Initiatives — ZyphonOS ecosystem</title>
-<meta name="description" content="What is actually being built across the ecosystem, with honest status labels: active, in development, research, proposed.">
+<title>Work: what is public</title>
+<meta name="description" content="Public objects with honest status labels. No client project is published without permission.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/syne-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Work: what is public">
+<meta property="og:description" content="Public objects with honest status labels. No client project is published without permission.">
+<meta property="og:type" content="website">
 <link rel="canonical" href="https://zyphonos.github.io/work.html">
-<meta name="theme-color" content="#080A09">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Work &amp; Initiatives — ZyphonOS ecosystem">
-<meta property="og:description" content="What is actually being built, with honest status labels.">
 <meta property="og:url" content="https://zyphonos.github.io/work.html">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
 </head>
-<body data-p="ecosystem">
-<a class="skip" href="#main">Skip to content</a>
-
-<header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="/"><span class="dot"></span>ZyphonOS<span class="muted" style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase">ecosystem</span></a>
-    <input type="checkbox" id="navtoggle" class="nav-toggle">
-    <label class="nav-toggle-label" for="navtoggle" aria-label="Open menu"><span></span><span></span></label>
-    <nav class="nav" aria-label="Primary">
-      <ul>
-        <li><a href="/vision.html">Vision</a></li>
-        <li><a href="/ecosystem.html">Ecosystem</a></li>
-        <li><a href="/work.html" aria-current="page">Work</a></li>
-        <li><a href="/participate.html">Participate</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li class="nav-cta"><a href="/participate.html">Start a conversation</a></li>
-      </ul>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="mark" href="index.html">Zyphonos</a>
+    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="ecosystem.html">Ecosystem</a><a href="work.html" aria-current="page">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a>
+      <a class="btn" href="contact.html">Contact</a>
     </nav>
   </div>
-</header>
-
-<main id="main">
-
-  <section class="hero" style="padding-bottom:clamp(32px,5vw,56px)">
-    <div class="wrap">
-      <p class="eyebrow">Work &amp; initiatives</p>
-      <h1>What is being built.</h1>
-      <p class="lede">Every item carries its real status. If it says research, it is research. If it says proposed, nobody has started it yet.</p>
-      <p class="mono muted mt-3" style="letter-spacing:.14em">ACTIVE · IN DEVELOPMENT · RESEARCH · PROPOSED</p>
-    </div>
+</header><main id="main">
+  <section class="wrap hero">
+    <p class="label hero__label">Work &middot; what is public</p>
+    <h1 class="display" style="max-width:16ch">What is actually built.</h1>
+    <p class="lead">Objects, not intentions. Each entry says what it is, what state it is in, and how
+    a reader can check it.</p>
   </section>
 
-  <hr class="rule">
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">ZyphonOS</p>
-        <h2>Technology and research</h2>
-      </div>
-      <ul class="clean">
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Agent and execution infrastructure</strong><span class="chip build">in development</span>
-          </div>
-          <p class="muted small mb-0">A local agent runtime that holds intent, executes work, and records what it actually did. Built for ordinary operational work rather than demonstration.</p>
-        </li>
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Verification and honesty gates</strong><span class="chip live">active</span>
-          </div>
-          <p class="muted small mb-0">Deterministic checks that refuse to pass when evidence is missing: a claim is not a completion, an unknown is not a zero, a stale fact is not a current one.</p>
-        </li>
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Continuity and documentation systems</strong><span class="chip live">active</span>
-          </div>
-          <p class="muted small mb-0">Structured operating knowledge so work survives interruptions, machine failures and changes of session — the least glamorous and most load-bearing part of the whole system.</p>
-        </li>
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>The AOSI research question</strong><span class="chip res">research</span>
-          </div>
-          <p class="muted small mb-0">Whether an organically integrated intelligence is possible, and what preserving intent and honest continuity would require. An open question, not a delivered system.</p>
-        </li>
-      </ul>
-    </div>
+  <section class="wrap band--tight">
+    <table class="reg">
+      <caption class="caption">Public objects. Status uses the same four labels as the technology
+      room: implemented, in development, research, proposed.</caption>
+      <thead><tr><th scope="col">Object</th><th scope="col">What it is</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Object">This site</td><td data-l="What it is">The ecosystem front door: four participants, one relationship
+          register, no claims that cannot be checked.</td><td data-l="Status">Implemented</td></tr>
+        <tr><td data-l="Object">Verification ledger</td><td data-l="What it is">A record where a completion claim stays unverified until
+          a row from outside the claimer names the channel and the value read.</td><td data-l="Status">Implemented</td></tr>
+        <tr><td data-l="Object">Agent kernel</td><td data-l="What it is">An agent runtime that runs on an ordinary machine and keeps state
+          on disk rather than in a conversation.</td><td data-l="Status">Implemented</td></tr>
+        <tr><td data-l="Object">ZyphonOS room</td><td data-l="What it is">The instrument room: labels, definitions and the honesty rule.</td>
+          <td data-l="Status">Implemented</td></tr>
+        <tr><td data-l="Object">WillWired room</td><td data-l="What it is">Colour system and display face are its owner&rsquo;s decision
+          and are not finalised.</td><td data-l="Status">In development</td></tr>
+        <tr><td data-l="Object">EBVKA room</td><td data-l="What it is">Held open for the artist&rsquo;s own identity process. Nothing is
+          invented in the meantime.</td><td data-l="Status">In development</td></tr>
+      </tbody>
+    </table>
   </section>
 
-  <section class="band">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">PIKKAIO</p>
-        <h2>Business development and management</h2>
-      </div>
-      <ul class="clean">
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Brand development engagements</strong><span class="chip live">active</span>
-          </div>
-          <p class="muted small mb-0">Positioning, identity and the applications that make a brand usable. Delivered to external clients under separate written scope.</p>
-        </li>
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Documentation and business writing</strong><span class="chip live">active</span>
-          </div>
-          <p class="muted small mb-0">The written assets a business needs before it can be taken seriously: agreements, proposals, operating procedures, and the documents people send to decide whether to work with you.</p>
-        </li>
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Campaign development</strong><span class="chip build">in development</span>
-          </div>
-          <p class="muted small mb-0">Campaign planning and production for participating businesses, built to be repeated rather than admired once.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">WILLWIRED</p>
-        <h2>Technology and power</h2>
-      </div>
-      <ul class="clean">
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Technology sourcing and supply</strong><span class="chip live">active</span>
-          </div>
-          <p class="muted small mb-0">Equipment recommended against a real budget and use case, sourced and supplied, with installation handled by vetted partners where required.</p>
-        </li>
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>EL NIÑO — reliable power</strong><span class="chip build">in development</span>
-          </div>
-          <p class="muted small mb-0">Solar and energy solutions sized to actual consumption, addressing the cost and disruption of unstable supply for households and small businesses.</p>
-        </li>
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>TAD — technology access for young people</strong><span class="chip idea">proposed</span>
-          </div>
-          <p class="muted small mb-0">An intended initiative to put real technology in the hands of children and teenagers, beginning in Lagos with wider Nigerian and African intention. Not yet a legally established or operating foundation; no programmes, beneficiaries or outcomes are claimed.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">EBVKA</p>
-        <h2>Music and creative work</h2>
-      </div>
-      <ul class="clean">
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Debut album</strong><span class="chip build">in preparation</span>
-          </div>
-          <p class="muted small mb-0">A first body of work, currently being written and recorded, with release planned for December 2026. No track listing, artwork, dates or distribution links are published until each is confirmed.</p>
-        </li>
-        <li>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Public identity and audience building</strong><span class="chip live">active</span>
-          </div>
-          <p class="muted small mb-0">Building an audience directly rather than through a label, with creative direction and catalogue remaining the artist's.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">A note on proof</p>
-          <h2>Nothing here is dressed up.</h2>
-        </div>
-        <div class="stack-md">
-          <p>There are no client logos on this page, no testimonials, and no numbers offered as results. That is deliberate: a public site that manufactures credibility is the fastest way to lose it with exactly the people worth talking to.</p>
-          <p>Where work has been done, it is described. Where it is only intended, it is labelled. If you want to see something specific before you engage, ask — and you will be told plainly whether it exists.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
+  <section class="wrap band--tight">
+    <div class="split">
       <div>
-        <p class="eyebrow">Next</p>
-        <p class="pull" style="max-width:26ch">Ask about the part that matters to you.</p>
+        <h2>Client work</h2>
+        <p class="body" style="margin-top:24px">No client project is published here without written
+        permission, and none has been published yet. When one is, it will carry the client&rsquo;s own
+        words and a date, not a testimonial we wrote.</p>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/contact.html">Start a conversation <span class="arrow">→</span></a>
-        <a class="btn btn-ghost" href="/participate.html">Ways to participate</a>
+      <div>
+        <h2>The stage, stated plainly</h2>
+        <p class="body" style="margin-top:24px">ZyphonOS has not yet earned revenue from a customer.
+        We say so on a public page because a stage that is hidden becomes a claim that is false, and
+        because the first paying customer is the only milestone that counts as progress.</p>
       </div>
     </div>
   </section>
-
 </main>
 
-<footer class="site-foot">
+<footer class="foot">
   <div class="wrap">
-    <div class="foot-grid">
+    <div class="foot__grid">
       <div>
-        <h4>ZyphonOS ecosystem</h4>
-        <p style="max-width:42ch">A shared environment for independent businesses, creative identities and technology ventures.</p>
+        <span class="label">This site</span>
+        <p class="caption">Four independent participants, one front door. ZyphonOS maintains this
+        site and does not own the participants. Every relationship is labelled with the word that
+        is legally true.</p>
+        <div class="legend">
+          <div><strong>Manages</strong><p>By agreement, revocable, scoped. Never ownership.</p></div>
+          <div><strong>Aligned</strong><p>Shared intent, one front door. No equity implied.</p></div>
+          <div><strong>Independent</strong><p>Self-owned. Keeps its own name and its own money.</p></div>
+        </div>
       </div>
       <div>
-        <h4>Participants</h4>
-        <ul>
-          <li><a href="/zyphonos.html">ZyphonOS</a></li>
-          <li><a href="/pikkaio.html">PIKKAIO</a></li>
-          <li><a href="/willwired.html">WILLWIRED</a></li>
-          <li><a href="/ebvka.html">EBVKA</a></li>
-        </ul>
+        <span class="label">Pages</span>
+        <ul><li><a href="index.html">Home</a></li><li><a href="ecosystem.html">Ecosystem</a></li><li><a href="zyphonos.html">ZyphonOS</a></li><li><a href="pikkaio.html">Pikkaio</a></li><li><a href="willwired.html">WillWired</a></li><li><a href="ebvka.html">EBVKA</a></li><li><a href="work.html">Work</a></li><li><a href="vision.html">Vision</a></li><li><a href="participate.html">Participate</a></li><li><a href="contact.html">Contact</a></li></ul>
       </div>
       <div>
-        <h4>The ecosystem</h4>
+        <span class="label">Contact</span>
         <ul>
-          <li><a href="/vision.html">Vision</a></li>
-          <li><a href="/ecosystem.html">How it works</a></li>
-          <li><a href="/work.html">Work</a></li>
-          <li><a href="/participate.html">Participate</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact routes</a></li>
+          <li class="caption" style="margin-top:12px">Pikkaio and WillWired have published
+          addresses. ZyphonOS and EBVKA enquiries are handled by Pikkaio until their own addresses
+          are confirmed.</li>
         </ul>
       </div>
     </div>
-    <div class="foot-base">
-      <span>© <span id="yr">2026</span> ZyphonOS ecosystem. Each participant retains its own identity and ownership.</span>
-      <span>Lagos, Nigeria</span>
-    </div>
+    <hr class="rule" style="margin:48px 0 24px">
+    <p class="caption">Built 2026-11-09. No claim on this site is a forecast. Where something does not
+    exist yet, the page says so.</p>
   </div>
 </footer>
+<script src="nav.js" defer></script>
 </body>
 </html>

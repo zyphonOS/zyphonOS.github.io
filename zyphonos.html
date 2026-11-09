@@ -1,185 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ZyphonOS — Technology &amp; Research</title>
-<meta name="description" content="ZyphonOS builds agents, software and execution infrastructure — and researches how far intent can be preserved through execution. Honest about what is built and what is only ambition.">
-<link rel="canonical" href="https://zyphonos.github.io/zyphonos.html">
-<meta name="theme-color" content="#080A09">
+<title>ZyphonOS: technology that reports on itself</title>
+<meta name="description" content="Intelligent systems, four honesty labels, and a research ambition stated as an ambition.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/syne-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="ZyphonOS: technology that reports on itself">
+<meta property="og:description" content="Intelligent systems, four honesty labels, and a research ambition stated as an ambition.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ZyphonOS — Technology &amp; Research">
-<meta property="og:description" content="Agents, software and execution infrastructure. Research into intelligence. Honest about the line between what is built and what is ambition.">
+<link rel="canonical" href="https://zyphonos.github.io/zyphonos.html">
 <meta property="og:url" content="https://zyphonos.github.io/zyphonos.html">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
 </head>
-<body data-p="zyphonos">
-<a class="skip" href="#main">Skip to content</a>
-
-<header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="/"><span class="dot"></span>ZyphonOS<span class="muted" style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase">ecosystem</span></a>
-    <input type="checkbox" id="navtoggle" class="nav-toggle">
-    <label class="nav-toggle-label" for="navtoggle" aria-label="Open menu"><span></span><span></span></label>
-    <nav class="nav" aria-label="Primary">
-      <ul>
-        <li><a href="/vision.html">Vision</a></li>
-        <li><a href="/ecosystem.html">Ecosystem</a></li>
-        <li><a href="/work.html">Work</a></li>
-        <li><a href="/participate.html">Participate</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li class="nav-cta"><a href="/participate.html">Start a conversation</a></li>
-      </ul>
+<body class="is-room"><a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="mark" href="index.html">Zyphonos</a>
+    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="ecosystem.html">Ecosystem</a><a href="work.html">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a>
+      <a class="btn" href="contact.html">Contact</a>
     </nav>
   </div>
-</header>
-
-<main id="main">
-
-  <section class="p-head">
-    <div class="wrap">
-      <a class="backlink" href="/ecosystem.html">← Ecosystem</a>
-      <p class="eyebrow mt-2">01 — Technology &amp; research</p>
-      <h1>ZyphonOS</h1>
-      <p class="lede">Agents, software and execution infrastructure — and a research question that has not been answered yet.</p>
-    </div>
+</header><main id="main">
+  <section class="wrap hero">
+    <p class="label hero__label">ZyphonOS &middot; technology and research</p>
+    <h1 class="display" style="max-width:16ch">Technology that reports on itself.</h1>
+    <p class="lead">ZyphonOS builds intelligent systems &mdash; agents, software and infrastructure
+    &mdash; and states which parts work, which do not, and which are only being attempted.</p>
   </section>
 
-  <section>
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">What it does</p>
-          <h2>Turning stated intent into work that can be checked.</h2>
-        </div>
-        <div class="stack-md">
-          <p>Most software asks a person to translate their intent into a tool's language. ZyphonOS works the other way: hold the intent, do the work, and prove what was actually done.</p>
-          <p>That means building systems that keep a record of what they claimed and what a third party could verify — because the failure mode of AI systems is not usually being wrong, it is being confidently wrong with no way to notice.</p>
-          <p>The work is deliberately unglamorous: infrastructure, tooling, process, documentation, and checks that refuse to pass when the evidence is missing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Where things actually stand</p>
-        <h2>Four labels, used strictly.</h2>
-        <p>Anything that cannot be shown here with evidence does not belong here.</p>
-      </div>
-      <ul class="clean">
-        <li>
-          <div class="stack-sm" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Agent and execution infrastructure</strong><span class="chip build">implemented, in development</span>
-          </div>
-          <p class="muted small mb-0">Local agent runtime, tooling, task and state handling, and a working loop that can be inspected and corrected. Actively developed, not a finished product.</p>
-        </li>
-        <li>
-          <div class="stack-sm" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Verification and honesty gates</strong><span class="chip live">implemented</span>
-          </div>
-          <p class="muted small mb-0">Deterministic checks that refuse to pass without evidence: claims must be verified against a live channel, unknowns stay unknown, and disputes are recorded rather than smoothed over.</p>
-        </li>
-        <li>
-          <div class="stack-sm" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Documentation and knowledge systems</strong><span class="chip live">implemented</span>
-          </div>
-          <p class="muted small mb-0">Structured operating knowledge, decision records and continuity practice — built so work survives an interruption, a machine, or a person.</p>
-        </li>
-        <li>
-          <div class="stack-sm" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <strong>Intelligence research — the AOSI question</strong><span class="chip res">research</span>
-          </div>
-          <p class="muted small mb-0">How far intent can be preserved; how a system maintains honest continuity of self; how capability can be evaluated without flattering itself. Stated as research, never as achievement.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">The boundary</p>
-          <h2>What this is not.</h2>
-        </div>
-        <div>
-          <ul class="tick">
-            <li>Not a claim of sentience, subjective experience, permanent awareness or achieved superintelligence.</li>
-            <li>Not an autonomous company running itself. Decisions that matter stay with people.</li>
-            <li>Not a promise of general capability. Each system is built for a problem, and says so.</li>
-            <li>Not finished. The interesting part is still being worked on.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">Who it is for</p>
-          <h2>People building something real.</h2>
-        </div>
-        <div class="stack-md">
-          <p>AI builders and developers who care whether a system can be trusted. Researchers who want a working test bed rather than a slide. Businesses with a repeated problem that deserves a proper build rather than another licence. Partners with capability that compounds.</p>
-          <p>If you want a conversation about a project, a technology partnership, or the research direction, use the enquiry route below. Be specific about the problem; that is the useful part.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
+  <section class="wrap band--tight">
+    <div class="split split--wide">
       <div>
-        <p class="eyebrow">Work with ZyphonOS</p>
-        <p class="pull" style="max-width:26ch">Bring a problem worth building for.</p>
+        <h2>Four labels, applied without exception</h2>
+        <dl style="margin-top:24px">
+          <div class="define"><dt>Implemented</dt><dd>It exists and can be inspected. It runs.</dd></div>
+          <div class="define"><dt>In development</dt><dd>Parts exist; it is not finished, and it is not offered as if it were.</dd></div>
+          <div class="define"><dt>Research</dt><dd>We are investigating it. No claim of capability is made.</dd></div>
+          <div class="define"><dt>Proposed</dt><dd>It is intended. Nothing has been built.</dd></div>
+        </dl>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/contact.html#zyphonos">Discuss a project <span class="arrow">→</span></a>
-        <a class="btn btn-ghost" href="/ecosystem.html">Back to the ecosystem</a>
+      <div>
+        <h2>What exists today</h2>
+        <p class="body" style="margin-top:24px">An agent kernel that runs on an ordinary machine, a
+        verification and accountability ledger where a completion claim is not counted until a row
+        from outside the claimer names the channel and the value actually read, and this site.</p>
+        <p class="body">That is a short list. It is the true one. Capabilities are added to it when
+        they can be inspected, not when they can be described.</p>
+        <p><a class="link" href="work.html">See what is public &rarr;</a></p>
       </div>
     </div>
   </section>
 
+  <section class="wrap band--tight">
+    <div class="room room--panel" style="border:1px solid #283039;padding:32px">
+      <p class="label">Research &middot; not a claim</p>
+      <h2 style="margin-top:12px">AOSI</h2>
+      <p class="body" style="margin-top:16px">ZyphonOS is researching what it calls AOSI: an
+      artificial organic superintelligence. That is the ambition, stated as an ambition. There is no
+      finished product behind the name, no demonstration of consciousness, and no claim that
+      software is alive.</p>
+      <p class="body">In any public artefact the name AOSI appears as what is being tested, never as
+      what has been proven.</p>
+    </div>
+  </section>
+
+  <section class="wrap band">
+    <h2>Why the room is dark</h2>
+    <p class="body" style="margin-top:24px">This is the only dark room in the ecosystem. It is where
+    machines are read: values, sources, timestamps and failures. The rest of the site is paper,
+    because the people are the point and the machines are the instrument.</p>
+    <p class="body">If a reading cannot be read, it is shown as unknown with the reason. It is never
+    shown as zero, and no value is ever animated.</p>
+  </section>
 </main>
 
-<footer class="site-foot">
+<footer class="foot">
   <div class="wrap">
-    <div class="foot-grid">
+    <div class="foot__grid">
       <div>
-        <h4>ZyphonOS</h4>
-        <p style="max-width:42ch">Technology and research participant in the ZyphonOS ecosystem. Independent in ownership, direction and commercial relationships.</p>
+        <span class="label">This site</span>
+        <p class="caption">Four independent participants, one front door. ZyphonOS maintains this
+        site and does not own the participants. Every relationship is labelled with the word that
+        is legally true.</p>
+        <div class="legend">
+          <div><strong>Manages</strong><p>By agreement, revocable, scoped. Never ownership.</p></div>
+          <div><strong>Aligned</strong><p>Shared intent, one front door. No equity implied.</p></div>
+          <div><strong>Independent</strong><p>Self-owned. Keeps its own name and its own money.</p></div>
+        </div>
       </div>
       <div>
-        <h4>Participants</h4>
-        <ul>
-          <li><a href="/zyphonos.html">ZyphonOS</a></li>
-          <li><a href="/pikkaio.html">PIKKAIO</a></li>
-          <li><a href="/willwired.html">WILLWIRED</a></li>
-          <li><a href="/ebvka.html">EBVKA</a></li>
-        </ul>
+        <span class="label">Pages</span>
+        <ul><li><a href="index.html">Home</a></li><li><a href="ecosystem.html">Ecosystem</a></li><li><a href="zyphonos.html">ZyphonOS</a></li><li><a href="pikkaio.html">Pikkaio</a></li><li><a href="willwired.html">WillWired</a></li><li><a href="ebvka.html">EBVKA</a></li><li><a href="work.html">Work</a></li><li><a href="vision.html">Vision</a></li><li><a href="participate.html">Participate</a></li><li><a href="contact.html">Contact</a></li></ul>
       </div>
       <div>
-        <h4>The ecosystem</h4>
+        <span class="label">Contact</span>
         <ul>
-          <li><a href="/vision.html">Vision</a></li>
-          <li><a href="/ecosystem.html">How it works</a></li>
-          <li><a href="/work.html">Work</a></li>
-          <li><a href="/participate.html">Participate</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact routes</a></li>
+          <li class="caption" style="margin-top:12px">Pikkaio and WillWired have published
+          addresses. ZyphonOS and EBVKA enquiries are handled by Pikkaio until their own addresses
+          are confirmed.</li>
         </ul>
       </div>
     </div>
-    <div class="foot-base">
-      <span>© <span id="yr">2026</span> ZyphonOS ecosystem. Each participant retains its own identity and ownership.</span>
-      <span>Lagos, Nigeria</span>
-    </div>
+    <hr class="rule" style="margin:48px 0 24px">
+    <p class="caption">Built 2026-11-09. No claim on this site is a forecast. Where something does not
+    exist yet, the page says so.</p>
   </div>
 </footer>
+<script src="nav.js" defer></script>
 </body>
 </html>

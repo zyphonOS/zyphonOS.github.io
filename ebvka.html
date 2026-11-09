@@ -1,185 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EBVKA — Artist</title>
-<meta name="description" content="EBVKA is an independent artist and creative identity. Music, story and presence — with its own direction, rights and audience.">
+<title>EBVKA: independent artist and creative company</title>
+<meta name="description" content="Music, storytelling and its own catalogue. Three registers, held distinctly.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/syne-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="EBVKA: independent artist and creative company">
+<meta property="og:description" content="Music, storytelling and its own catalogue. Three registers, held distinctly.">
+<meta property="og:type" content="website">
 <link rel="canonical" href="https://zyphonos.github.io/ebvka.html">
-<meta name="theme-color" content="#080A09">
-<meta property="og:type" content="profile">
-<meta property="og:title" content="EBVKA — Artist">
-<meta property="og:description" content="An independent artist and creative identity. Music, story and presence — on its own terms.">
 <meta property="og:url" content="https://zyphonos.github.io/ebvka.html">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
-<style>
-  /* EBVKA reads as an artist page, not a company page */
-  body[data-p="ebvka"] .p-head{padding-top:clamp(76px,13vw,168px);padding-bottom:clamp(56px,9vw,104px)}
-  body[data-p="ebvka"] .p-head h1{font-size:clamp(3.2rem,11vw,8rem);letter-spacing:-.03em;line-height:.9}
-  body[data-p="ebvka"] .lede{font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.75rem);color:#E2DFD7}
-  .lyric{font-family:var(--serif);font-size:clamp(1.4rem,4vw,2.9rem);line-height:1.16;letter-spacing:-.02em;max-width:20ch}
-  .lyric span{display:block;color:var(--muted-dim)}
-  .release{display:grid;gap:10px;padding:clamp(26px,4vw,40px);border:1px solid var(--line);background:var(--char)}
-  .release .when{font-family:ui-monospace,monospace;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ebv)}
-</style>
 </head>
-<body data-p="ebvka">
-<a class="skip" href="#main">Skip to content</a>
-
-<header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="/"><span class="dot"></span>EBVKA<span class="muted" style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase">artist</span></a>
-    <input type="checkbox" id="navtoggle" class="nav-toggle">
-    <label class="nav-toggle-label" for="navtoggle" aria-label="Open menu"><span></span><span></span></label>
-    <nav class="nav" aria-label="Primary">
-      <ul>
-        <li><a href="#music">Music</a></li>
-        <li><a href="#story">Story</a></li>
-        <li><a href="#work-with">Work with EBVKA</a></li>
-        <li><a href="/ecosystem.html">Ecosystem</a></li>
-        <li class="nav-cta"><a href="/contact.html#ebvka">Bookings &amp; enquiries</a></li>
-      </ul>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="mark" href="index.html">Zyphonos</a>
+    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="ecosystem.html">Ecosystem</a><a href="work.html">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a>
+      <a class="btn" href="contact.html">Contact</a>
     </nav>
   </div>
-</header>
-
-<main id="main">
-
-  <section class="p-head">
-    <div class="wrap">
-      <p class="eyebrow">Independent artist</p>
-      <h1>EBVKA</h1>
-      <p class="lede">Unlabelled. No permission required.</p>
-    </div>
+</header><main id="main">
+  <section class="wrap hero">
+    <p class="label hero__label">EBVKA &middot; independent artist and creative company</p>
+    <h1 class="display" style="max-width:16ch">An independent artist and a company.</h1>
+    <p class="lead">Music, expression, storytelling, its own catalogue, its own audience and its own
+    intellectual property. EBVKA participates in this ecosystem voluntarily and keeps its
+    independence.</p>
   </section>
 
-  <section>
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow" id="story">The story</p>
-          <p class="lyric">A voice from Lagos. <span>Not waiting to be chosen.</span></p>
-        </div>
-        <div class="stack-md">
-          <p>EBVKA is an independent artist and creative identity — a person who sings, writes and performs, and who intends to build a body of work on his own terms.</p>
-          <p>The name is self-given. That is the point. The usual route asks an artist to be selected before being heard: a label, a playlist, a gatekeeper, a yes from someone else. This route is the other one — put the work out, build the audience directly, and keep ownership of the catalogue while doing it.</p>
-          <p>The music carries the ambition of the wider ecosystem without being owned by it. The story is the same one told everywhere here: build it yourself, and name yourself. But it is told in the only way that makes an artist worth listening to — in his own voice, about his own life.</p>
-        </div>
+  <section class="wrap band--tight">
+    <h2>Three registers, held distinctly</h2>
+    <dl style="margin-top:24px">
+      <div class="define"><dt>Person</dt><dd>The founder: a person with a life, a name and a
+      practice, not a brand asset.</dd></div>
+      <div class="define"><dt>Artist</dt><dd>The creative identity: music, writing, performance and
+      the work itself.</dd></div>
+      <div class="define"><dt>Company</dt><dd>The commercial identity: catalogue, rights, audience,
+      agreements and revenue.</dd></div>
+    </dl>
+    <p class="body" style="margin-top:24px">These are three registers of one participant, not three
+    brands. They are kept separate because they answer different questions: who is speaking, what
+    was made, and what was agreed.</p>
+  </section>
+
+  <section class="wrap band--tight">
+    <div class="split">
+      <div>
+        <h2>Creative-work states</h2>
+        <p class="caption" style="margin-top:16px">Used for creative work only. These are not company
+        statuses and they are not maturity labels.</p>
+        <dl style="margin-top:24px">
+          <div class="define"><dt>Performed</dt><dd>The work has been played or shown to an audience.</dd></div>
+          <div class="define"><dt>Recorded</dt><dd>The work exists as a recording.</dd></div>
+          <div class="define"><dt>Releasing</dt><dd>The work is being prepared for release, with a confirmed path.</dd></div>
+          <div class="define"><dt>Archived</dt><dd>The work is held and not currently being released.</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h2>Independence and management</h2>
+        <p class="body" style="margin-top:24px">Pikkaio develops and manages EBVKA under an agreed
+        relationship. This does not constitute ownership. ZyphonOS provides intelligence and
+        infrastructure without defining or absorbing EBVKA&rsquo;s identity.</p>
+        <p class="body">EBVKA&rsquo;s visual identity is not yet approved, and it will not be
+        invented here. It requires its own process and the artist&rsquo;s own approval. Nothing on
+        this site derives EBVKA&rsquo;s identity from another participant&rsquo;s colours.</p>
+        <p class="body">Releases are announced when they are real. No date, distributor or streaming
+        link is published in advance of confirmation.</p>
       </div>
     </div>
   </section>
-
-  <section class="band" id="music">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">Music</p>
-          <h2>Where the work stands.</h2>
-        </div>
-        <div class="stack-lg">
-          <div class="release">
-            <p class="when">In preparation</p>
-            <h3 style="font-family:var(--serif);font-size:1.7rem">Debut album</h3>
-            <p class="muted small mb-0">A first body of work is being written and recorded, with release planned for <strong>December 2026</strong>. No release date, track listing, artwork or distribution link is published here until each one is real and confirmed — an artist page that invents a catalogue is not an artist page.</p>
-          </div>
-          <div>
-            <p class="small muted" style="margin-bottom:14px">Official channels and listening links will appear here when they go live. Until then, the reliable way to reach the artist or the team is the enquiry route below.</p>
-            <div class="cta-row">
-              <a class="btn btn-ghost" href="/contact.html#ebvka">Request a release update <span class="arrow">→</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">Presence</p>
-          <h2>What this artist is building.</h2>
-        </div>
-        <div>
-          <ul class="clean">
-            <li><span class="label">Sound</span><span>Music with melody at the centre — built to be sung back, not just streamed.</span></li>
-            <li><span class="label">Story</span><span>A public identity developed openly: the work, the process, and the reality of building without a label.</span></li>
-            <li><span class="label">Independence</span><span>Own creative direction, own catalogue, own rights. Management and partnership are agreements, never ownership.</span></li>
-            <li><span class="label">Reach</span><span>An audience built directly — diaspora and international listeners first, because that is where the economics of music actually work.</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="work-with">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">Work with EBVKA</p>
-          <h2>Open to the right rooms.</h2>
-        </div>
-        <div>
-          <ul class="tick">
-            <li><strong>Bookings</strong> — live shows, features, private and corporate events.</li>
-            <li><strong>Collaboration</strong> — producers, writers, instrumentalists, visual artists.</li>
-            <li><strong>Brand and sync</strong> — campaigns, film, series and spaces where the music fits rather than intrudes.</li>
-            <li><strong>Press and interviews</strong> — for outlets covering independent African music.</li>
-          </ul>
-          <div class="cta-row mt-3">
-            <a class="btn btn-primary" href="/contact.html#ebvka">Enquire about EBVKA <span class="arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <p class="pull" style="max-width:24ch">No label. <em>Name yourself.</em></p>
-      <p class="small muted mt-2" style="max-width:56ch">EBVKA participates in the ZyphonOS ecosystem and is not owned by any participant. Creative direction, catalogue and identity remain the artist's.</p>
-      <div class="cta-row mt-3">
-        <a class="btn btn-ghost" href="/ecosystem.html">See the ecosystem <span class="arrow">→</span></a>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="site-foot">
+<footer class="foot">
   <div class="wrap">
-    <div class="foot-grid">
+    <div class="foot__grid">
       <div>
-        <h4>EBVKA</h4>
-        <p style="max-width:42ch">Independent artist and creative identity. Music, story and presence — with its own direction, rights and audience.</p>
+        <span class="label">This site</span>
+        <p class="caption">Four independent participants, one front door. ZyphonOS maintains this
+        site and does not own the participants. Every relationship is labelled with the word that
+        is legally true.</p>
+        <div class="legend">
+          <div><strong>Manages</strong><p>By agreement, revocable, scoped. Never ownership.</p></div>
+          <div><strong>Aligned</strong><p>Shared intent, one front door. No equity implied.</p></div>
+          <div><strong>Independent</strong><p>Self-owned. Keeps its own name and its own money.</p></div>
+        </div>
       </div>
       <div>
-        <h4>Participants</h4>
-        <ul>
-          <li><a href="/zyphonos.html">ZyphonOS</a></li>
-          <li><a href="/pikkaio.html">PIKKAIO</a></li>
-          <li><a href="/willwired.html">WILLWIRED</a></li>
-          <li><a href="/ebvka.html">EBVKA</a></li>
-        </ul>
+        <span class="label">Pages</span>
+        <ul><li><a href="index.html">Home</a></li><li><a href="ecosystem.html">Ecosystem</a></li><li><a href="zyphonos.html">ZyphonOS</a></li><li><a href="pikkaio.html">Pikkaio</a></li><li><a href="willwired.html">WillWired</a></li><li><a href="ebvka.html">EBVKA</a></li><li><a href="work.html">Work</a></li><li><a href="vision.html">Vision</a></li><li><a href="participate.html">Participate</a></li><li><a href="contact.html">Contact</a></li></ul>
       </div>
       <div>
-        <h4>The ecosystem</h4>
+        <span class="label">Contact</span>
         <ul>
-          <li><a href="/vision.html">Vision</a></li>
-          <li><a href="/ecosystem.html">How it works</a></li>
-          <li><a href="/work.html">Work</a></li>
-          <li><a href="/participate.html">Participate</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact routes</a></li>
+          <li class="caption" style="margin-top:12px">Pikkaio and WillWired have published
+          addresses. ZyphonOS and EBVKA enquiries are handled by Pikkaio until their own addresses
+          are confirmed.</li>
         </ul>
       </div>
     </div>
-    <div class="foot-base">
-      <span>© <span id="yr">2026</span> EBVKA. Independent artist within the ZyphonOS ecosystem.</span>
-      <span>Lagos, Nigeria</span>
-    </div>
+    <hr class="rule" style="margin:48px 0 24px">
+    <p class="caption">Built 2026-11-09. No claim on this site is a forecast. Where something does not
+    exist yet, the page says so.</p>
   </div>
 </footer>
+<script src="nav.js" defer></script>
 </body>
 </html>
