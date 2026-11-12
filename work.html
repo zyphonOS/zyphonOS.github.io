@@ -3,107 +3,105 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Work: what is public</title>
-<meta name="description" content="Public objects with honest status labels. No client project is published without permission.">
+<title>Work: what is public &middot; ZyphonOS</title>
+<meta name="description" content="Public objects and their status: what is implemented, what is in development, and what has not been published.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/syne-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Work: what is public">
-<meta property="og:description" content="Public objects with honest status labels. No client project is published without permission.">
+<meta property="og:title" content="Work: what is public &middot; ZyphonOS">
+<meta property="og:description" content="Public objects and their status: what is implemented, what is in development, and what has not been published.">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://zyphonos.github.io/work.html">
 <meta property="og:url" content="https://zyphonos.github.io/work.html">
+<link rel="canonical" href="https://zyphonos.github.io/work.html">
 </head>
-<body><a class="skip" href="#main">Skip to content</a>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="wrap masthead__in">
-    <a class="mark" href="index.html">Zyphonos</a>
+    <a class="mark" href="index.html"><span class="mark__name">ZyphonOS</span><span class="mark__prog">AOSI</span></a>
     <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav class="nav" id="nav" aria-label="Primary">
-      <a href="ecosystem.html">Ecosystem</a><a href="work.html" aria-current="page">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a>
-      <a class="btn" href="contact.html">Contact</a>
-    </nav>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="ecosystem.html">Ecosystem</a><a href="work.html" aria-current="page">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a><a href="contact.html">Contact</a></nav>
   </div>
-</header><main id="main">
-  <section class="wrap hero">
-    <p class="label hero__label">Work &middot; what is public</p>
-    <h1 class="display" style="max-width:16ch">What is actually built.</h1>
-    <p class="lead">Objects, not intentions. Each entry says what it is, what state it is in, and how
-    a reader can check it.</p>
-  </section>
+</header>
+<main id="main">
 
-  <section class="wrap band--tight">
-    <table class="reg">
-      <caption class="caption">Public objects. Status uses the same four labels as the technology
-      room: implemented, in development, research, proposed.</caption>
-      <thead><tr><th scope="col">Object</th><th scope="col">What it is</th><th scope="col">Status</th></tr></thead>
-      <tbody>
-        <tr><td data-l="Object">This site</td><td data-l="What it is">The ecosystem front door: four participants, one relationship
-          register, no claims that cannot be checked.</td><td data-l="Status">Implemented</td></tr>
-        <tr><td data-l="Object">Verification ledger</td><td data-l="What it is">A record where a completion claim stays unverified until
-          a row from outside the claimer names the channel and the value read.</td><td data-l="Status">Implemented</td></tr>
-        <tr><td data-l="Object">Agent kernel</td><td data-l="What it is">An agent runtime that runs on an ordinary machine and keeps state
-          on disk rather than in a conversation.</td><td data-l="Status">Implemented</td></tr>
-        <tr><td data-l="Object">ZyphonOS room</td><td data-l="What it is">The instrument room: labels, definitions and the honesty rule.</td>
-          <td data-l="Status">Implemented</td></tr>
-        <tr><td data-l="Object">WillWired room</td><td data-l="What it is">Colour system and display face are its owner&rsquo;s decision
-          and are not finalised.</td><td data-l="Status">In development</td></tr>
-        <tr><td data-l="Object">EBVKA room</td><td data-l="What it is">Held open for the artist&rsquo;s own identity process. Nothing is
-          invented in the meantime.</td><td data-l="Status">In development</td></tr>
-      </tbody>
-    </table>
-  </section>
+<section class="wrap hero hero--sm">
+  <p class="label hero__label">Work &middot; what is public</p>
+  <h1 class="display display--sm">What is actually built.</h1>
+  <p class="lead">Objects, not intentions. Each entry says what it is, what state it is in, and
+  how a reader can check it.</p>
+</section>
 
-  <section class="wrap band--tight">
-    <div class="split">
-      <div>
-        <h2>Client work</h2>
-        <p class="body" style="margin-top:24px">No client project is published here without written
-        permission, and none has been published yet. When one is, it will carry the client&rsquo;s own
-        words and a date, not a testimonial we wrote.</p>
-      </div>
-      <div>
-        <h2>The stage, stated plainly</h2>
-        <p class="body" style="margin-top:24px">ZyphonOS has not yet earned revenue from a customer.
-        We say so on a public page because a stage that is hidden becomes a claim that is false, and
-        because the first paying customer is the only milestone that counts as progress.</p>
-      </div>
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Public objects</p>
+    <h2 class="h2">Status uses the same four labels as the technology room.</h2>
+  </div>
+  <div class="tablewrap">
+  <table class="reg">
+    <caption class="visually-hidden">Public objects, what each one is, and its status.</caption>
+    <thead><tr><th scope="col">Object</th><th scope="col">What it is</th><th scope="col">Status</th></tr></thead>
+    <tbody><tr><td data-l="Object"><strong>This site</strong></td><td data-l="What it is">The ecosystem front door: four participants, one relationship register, no claims that cannot be checked.</td><td data-l="Status"><span class="st">Implemented</span></td></tr><tr><td data-l="Object"><strong>Verification ledger</strong></td><td data-l="What it is">A record where a completion claim stays unverified until a row from outside the claimer names the channel and the value read.</td><td data-l="Status"><span class="st">Implemented</span></td></tr><tr><td data-l="Object"><strong>Agent kernel</strong></td><td data-l="What it is">An agent runtime that runs on an ordinary machine and keeps state on disk rather than in a conversation.</td><td data-l="Status"><span class="st">Implemented</span></td></tr><tr><td data-l="Object"><strong>ZyphonOS room</strong></td><td data-l="What it is">The instrument room: labels, definitions, readings with sources, and the honesty rule.</td><td data-l="Status"><span class="st">Implemented</span></td></tr><tr><td data-l="Object"><strong>WillWired room</strong></td><td data-l="What it is">Colour system and display face are its owner&rsquo;s decision and are not finalised.</td><td data-l="Status"><span class="st">In development</span></td></tr><tr><td data-l="Object"><strong>EBVKA room</strong></td><td data-l="What it is">Held open for the artist&rsquo;s own identity process. Nothing is invented in the meantime.</td><td data-l="Status"><span class="st">In development</span></td></tr><tr><td data-l="Object"><strong>Client work</strong></td><td data-l="What it is">No client project is published here without written permission, and none has been published yet.</td><td data-l="Status"><span class="st">None public</span></td></tr></tbody>
+  </table>
+  </div>
+  <p class="note">&ldquo;None public&rdquo; is not a status label; it is the honest answer where
+  something cannot exist yet. Read 2026-11-12T14:46Z.</p>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">The stage</p>
+    <h2 class="h2">Stated plainly.</h2>
+  </div>
+  <div class="split">
+    <div class="prose">
+      <p>ZyphonOS has not yet earned revenue from a customer. We say so on a public page because
+      a stage that is hidden becomes a claim that is false, and because the first paying customer
+      is the only milestone that counts as progress.</p>
+      <p>When a client project can be shown, it will carry the client&rsquo;s own words and a
+      date &mdash; not a testimonial written by us.</p>
     </div>
-  </section>
+    <aside class="aside">
+      <p class="label">What counts as progress here</p>
+      <p>Money received and logged, an object somebody can inspect, and a decision-critical fact
+      learned. Not activity, not a build month, and not a plan.</p>
+    </aside>
+  </div>
+</section>
+
 </main>
-
 <footer class="foot">
-  <div class="wrap">
-    <div class="foot__grid">
-      <div>
-        <span class="label">This site</span>
-        <p class="caption">Four independent participants, one front door. ZyphonOS maintains this
-        site and does not own the participants. Every relationship is labelled with the word that
-        is legally true.</p>
-        <div class="legend">
-          <div><strong>Manages</strong><p>By agreement, revocable, scoped. Never ownership.</p></div>
-          <div><strong>Aligned</strong><p>Shared intent, one front door. No equity implied.</p></div>
-          <div><strong>Independent</strong><p>Self-owned. Keeps its own name and its own money.</p></div>
-        </div>
-      </div>
-      <div>
-        <span class="label">Pages</span>
-        <ul><li><a href="index.html">Home</a></li><li><a href="ecosystem.html">Ecosystem</a></li><li><a href="zyphonos.html">ZyphonOS</a></li><li><a href="pikkaio.html">Pikkaio</a></li><li><a href="willwired.html">WillWired</a></li><li><a href="ebvka.html">EBVKA</a></li><li><a href="work.html">Work</a></li><li><a href="vision.html">Vision</a></li><li><a href="participate.html">Participate</a></li><li><a href="contact.html">Contact</a></li></ul>
-      </div>
-      <div>
-        <span class="label">Contact</span>
-        <ul>
-          <li><a href="contact.html">Contact routes</a></li>
-          <li class="caption" style="margin-top:12px">Pikkaio and WillWired have published
-          addresses. ZyphonOS and EBVKA enquiries are handled by Pikkaio until their own addresses
-          are confirmed.</li>
-        </ul>
-      </div>
+  <div class="wrap foot__in">
+    <div class="foot__col">
+      <p class="label">This site</p>
+      <p>AOSI is the research programme. ZyphonOS is the roof that publishes this site and
+      does not own the participants. Every relationship on it is labelled with the word that
+      is legally true.</p>
+      <p class="foot__meta">Content read 2026-11-12. No claim on this site is a forecast.</p>
     </div>
-    <hr class="rule" style="margin:48px 0 24px">
-    <p class="caption">Built 2026-11-09. No claim on this site is a forecast. Where something does not
-    exist yet, the page says so.</p>
+    <div class="foot__col">
+      <p class="label">Pages</p>
+      <ul class="plain">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ecosystem.html">Ecosystem</a></li>
+        <li><a href="zyphonos.html">ZyphonOS</a></li>
+        <li><a href="pikkaio.html">Pikkaio</a></li>
+        <li><a href="willwired.html">WillWired</a></li>
+        <li><a href="ebvka.html">EBVKA</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <p class="label">Routes</p>
+      <ul class="plain">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="participate.html">Participate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="foot__meta">Direct addresses are published on the contact page only, and only
+      where they are confirmed working.</p>
+    </div>
   </div>
 </footer>
 <script src="nav.js" defer></script>

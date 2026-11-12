@@ -4,112 +4,129 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZyphonOS: technology that reports on itself</title>
-<meta name="description" content="Intelligent systems, four honesty labels, and a research ambition stated as an ambition.">
+<meta name="description" content="An agent kernel, a verification ledger and a site that states which parts work, which do not, and which are only being attempted.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/syne-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="ZyphonOS: technology that reports on itself">
-<meta property="og:description" content="Intelligent systems, four honesty labels, and a research ambition stated as an ambition.">
+<meta property="og:description" content="An agent kernel, a verification ledger and a site that states which parts work, which do not, and which are only being attempted.">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://zyphonos.github.io/zyphonos.html">
 <meta property="og:url" content="https://zyphonos.github.io/zyphonos.html">
+<link rel="canonical" href="https://zyphonos.github.io/zyphonos.html">
 </head>
-<body class="is-room"><a class="skip" href="#main">Skip to content</a>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="wrap masthead__in">
-    <a class="mark" href="index.html">Zyphonos</a>
+    <a class="mark" href="index.html"><span class="mark__name">ZyphonOS</span><span class="mark__prog">AOSI</span></a>
     <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav class="nav" id="nav" aria-label="Primary">
-      <a href="ecosystem.html">Ecosystem</a><a href="work.html">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a>
-      <a class="btn" href="contact.html">Contact</a>
-    </nav>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="ecosystem.html">Ecosystem</a><a href="work.html">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a><a href="contact.html">Contact</a></nav>
   </div>
-</header><main id="main">
-  <section class="wrap hero">
-    <p class="label hero__label">ZyphonOS &middot; technology and research</p>
-    <h1 class="display" style="max-width:16ch">Technology that reports on itself.</h1>
-    <p class="lead">ZyphonOS builds intelligent systems &mdash; agents, software and infrastructure
-    &mdash; and states which parts work, which do not, and which are only being attempted.</p>
-  </section>
+</header>
+<main id="main">
 
-  <section class="wrap band--tight">
-    <div class="split split--wide">
-      <div>
-        <h2>Four labels, applied without exception</h2>
-        <dl style="margin-top:24px">
-          <div class="define"><dt>Implemented</dt><dd>It exists and can be inspected. It runs.</dd></div>
-          <div class="define"><dt>In development</dt><dd>Parts exist; it is not finished, and it is not offered as if it were.</dd></div>
-          <div class="define"><dt>Research</dt><dd>We are investigating it. No claim of capability is made.</dd></div>
-          <div class="define"><dt>Proposed</dt><dd>It is intended. Nothing has been built.</dd></div>
-        </dl>
-      </div>
-      <div>
-        <h2>What exists today</h2>
-        <p class="body" style="margin-top:24px">An agent kernel that runs on an ordinary machine, a
-        verification and accountability ledger where a completion claim is not counted until a row
-        from outside the claimer names the channel and the value actually read, and this site.</p>
-        <p class="body">That is a short list. It is the true one. Capabilities are added to it when
-        they can be inspected, not when they can be described.</p>
-        <p><a class="link" href="work.html">See what is public &rarr;</a></p>
-      </div>
+<section class="wrap hero hero--sm">
+  <p class="label hero__label">ZyphonOS &middot; technology and research</p>
+  <h1 class="display display--sm">Technology that reports on itself.</h1>
+  <p class="lead">ZyphonOS builds intelligent systems &mdash; agents, software and infrastructure
+  &mdash; and states which parts work, which do not, and which are only being attempted.</p>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Labels</p>
+    <h2 class="h2">Four labels, applied without exception.</h2>
+  </div>
+  <div class="defs defs--4"><div class="def"><h3 class="def__t">Implemented</h3><p>It exists and can be inspected. It runs.</p></div><div class="def"><h3 class="def__t">In development</h3><p>Parts exist; it is not finished, and it is not offered as if it were.</p></div><div class="def"><h3 class="def__t">Research</h3><p>We are investigating it. No claim of capability is made.</p></div><div class="def"><h3 class="def__t">Proposed</h3><p>It is intended. Nothing has been built.</p></div></div>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Readings</p>
+    <h2 class="h2">What the instrument can read today.</h2>
+    <p class="lead lead--sm">Value, source and read time. Where a reading cannot be taken, the
+    cell says unknown and says why.</p>
+  </div>
+  <div class="readings"><div class="reading"><p class="reading__label">Agent kernel on an ordinary machine</p><p class="reading__value">Implemented</p><p class="reading__meta">inspected &middot; read 2026-11-12T14:46Z</p></div><div class="reading"><p class="reading__label">Verification and accountability ledger</p><p class="reading__value">Implemented</p><p class="reading__meta">inspected &middot; read 2026-11-12T14:46Z</p></div><div class="reading"><p class="reading__label">This site</p><p class="reading__value">Implemented</p><p class="reading__meta">built and checked &middot; read 2026-11-12T14:46Z</p></div><div class="reading"><p class="reading__label">Payments received from a customer</p><p class="reading__value">0</p><p class="reading__meta">state/revenue/ledger.jsonl &middot; read 2026-11-12T14:46Z</p></div><div class="reading"><p class="reading__label">Public performance at scale</p><p class="reading__value">Unknown</p><p class="reading__meta">no authenticated reading exists</p></div><div class="reading"><p class="reading__label">AOSI consciousness</p><p class="reading__value">Research</p><p class="reading__meta">no claim of capability is made</p></div></div>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">What exists today</p>
+    <h2 class="h2">A short list, and the true one.</h2>
+  </div>
+  <div class="split">
+    <div class="prose">
+      <p>An agent kernel that runs on an ordinary machine and keeps its state on disk rather
+      than in a conversation. A verification and accountability ledger where a completion claim
+      is not counted until a row from outside the claimer names the channel and the value
+      actually read. And this site.</p>
+      <p>That is the whole list. Capabilities are added to it when they can be inspected, not
+      when they can be described.</p>
+      <p><a class="link" href="work.html">See every public object and its status &rarr;</a></p>
     </div>
-  </section>
-
-  <section class="wrap band--tight">
-    <div class="room room--panel" style="border:1px solid #283039;padding:32px">
+    <aside class="aside">
       <p class="label">Research &middot; not a claim</p>
-      <h2 style="margin-top:12px">AOSI</h2>
-      <p class="body" style="margin-top:16px">ZyphonOS is researching what it calls AOSI: an
-      artificial organic superintelligence. That is the ambition, stated as an ambition. There is no
-      finished product behind the name, no demonstration of consciousness, and no claim that
-      software is alive.</p>
-      <p class="body">In any public artefact the name AOSI appears as what is being tested, never as
-      what has been proven.</p>
-    </div>
-  </section>
+      <p><strong>AOSI.</strong> ZyphonOS is researching what it calls an artificial organic
+      superintelligence: a system that grows, holds continuity and reports on itself. That is
+      the ambition, stated as an ambition. There is no finished product behind the name, no
+      demonstration of consciousness, and no claim that software is alive.</p>
+    </aside>
+  </div>
+</section>
 
-  <section class="wrap band">
-    <h2>Why the room is dark</h2>
-    <p class="body" style="margin-top:24px">This is the only dark room in the ecosystem. It is where
-    machines are read: values, sources, timestamps and failures. The rest of the site is paper,
-    because the people are the point and the machines are the instrument.</p>
-    <p class="body">If a reading cannot be read, it is shown as unknown with the reason. It is never
-    shown as zero, and no value is ever animated.</p>
-  </section>
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Why the readings look like this</p>
+    <h2 class="h2">A reading is a channel, not an opinion.</h2>
+    <p class="lead lead--sm">This room shows values the way an instrument would: with the
+    channel they came from and the moment they were read.</p>
+  </div>
+  <ul class="list">
+    <li><strong>A missing reading is unknown, with a reason.</strong> It is never rendered as
+    zero, because zero is a measurement and absence is not.</li>
+    <li><strong>No value is animated or counted up.</strong> A number that moves on its own is
+    decoration, and decoration is where a stale figure hides.</li>
+    <li><strong>A failed check is published.</strong> If a surface did not answer, that is the
+    reading.</li>
+    <li><strong>Claims are counted last.</strong> The ledger counts what was verified, not what
+    was announced.</li>
+  </ul>
+</section>
+
 </main>
-
 <footer class="foot">
-  <div class="wrap">
-    <div class="foot__grid">
-      <div>
-        <span class="label">This site</span>
-        <p class="caption">Four independent participants, one front door. ZyphonOS maintains this
-        site and does not own the participants. Every relationship is labelled with the word that
-        is legally true.</p>
-        <div class="legend">
-          <div><strong>Manages</strong><p>By agreement, revocable, scoped. Never ownership.</p></div>
-          <div><strong>Aligned</strong><p>Shared intent, one front door. No equity implied.</p></div>
-          <div><strong>Independent</strong><p>Self-owned. Keeps its own name and its own money.</p></div>
-        </div>
-      </div>
-      <div>
-        <span class="label">Pages</span>
-        <ul><li><a href="index.html">Home</a></li><li><a href="ecosystem.html">Ecosystem</a></li><li><a href="zyphonos.html">ZyphonOS</a></li><li><a href="pikkaio.html">Pikkaio</a></li><li><a href="willwired.html">WillWired</a></li><li><a href="ebvka.html">EBVKA</a></li><li><a href="work.html">Work</a></li><li><a href="vision.html">Vision</a></li><li><a href="participate.html">Participate</a></li><li><a href="contact.html">Contact</a></li></ul>
-      </div>
-      <div>
-        <span class="label">Contact</span>
-        <ul>
-          <li><a href="contact.html">Contact routes</a></li>
-          <li class="caption" style="margin-top:12px">Pikkaio and WillWired have published
-          addresses. ZyphonOS and EBVKA enquiries are handled by Pikkaio until their own addresses
-          are confirmed.</li>
-        </ul>
-      </div>
+  <div class="wrap foot__in">
+    <div class="foot__col">
+      <p class="label">This site</p>
+      <p>AOSI is the research programme. ZyphonOS is the roof that publishes this site and
+      does not own the participants. Every relationship on it is labelled with the word that
+      is legally true.</p>
+      <p class="foot__meta">Content read 2026-11-12. No claim on this site is a forecast.</p>
     </div>
-    <hr class="rule" style="margin:48px 0 24px">
-    <p class="caption">Built 2026-11-09. No claim on this site is a forecast. Where something does not
-    exist yet, the page says so.</p>
+    <div class="foot__col">
+      <p class="label">Pages</p>
+      <ul class="plain">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ecosystem.html">Ecosystem</a></li>
+        <li><a href="zyphonos.html">ZyphonOS</a></li>
+        <li><a href="pikkaio.html">Pikkaio</a></li>
+        <li><a href="willwired.html">WillWired</a></li>
+        <li><a href="ebvka.html">EBVKA</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <p class="label">Routes</p>
+      <ul class="plain">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="participate.html">Participate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="foot__meta">Direct addresses are published on the contact page only, and only
+      where they are confirmed working.</p>
+    </div>
   </div>
 </footer>
 <script src="nav.js" defer></script>
