@@ -1,17 +1,25 @@
 @font-face{font-family:"Inter";src:url("fonts/inter-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 @font-face{font-family:"Syne";src:url("fonts/syne-var.woff2") format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
 
+/* ============================================================
+   AOSI ROOF — FIELD STATION SHELL (approved direction 2026-11-09,
+   confirmed by EBVKA 2026-11-14: "we are not mad scientists").
+   Warm documentary ground. Every member gets its own room inside it.
+   Contrast measured on paper #F7F3EA:
+     --muted #645E51 = 5.85:1 on paper / 5.04:1 on raised paper (PASSES AA)
+     --blue  #B03E00 = 5.31:1 on paper (PASSES AA)
+   ============================================================ */
 :root{
-  --navy:#070B18;
-  --surface:#0D1428;
-  --surface-2:#141C33;
-  --ink:#EAF0FF;
-  --muted:#9AA8C7;
-  --blue:#4C9AFF;
-  --blue-deep:#1E5FD0;
-  --gold:#F0B429;
-  --line:rgba(234,240,255,.10);
-  --line-strong:rgba(234,240,255,.22);
+  --navy:#F7F3EA;
+  --surface:#F1ECE0;
+  --surface-2:#E9E2D2;
+  --ink:#1A1712;
+  --muted:#645E51;
+  --blue:#B03E00;
+  --blue-deep:#8A3000;
+  --gold:#1A1712;
+  --line:#DED5C2;
+  --line-strong:#C4B79C;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --display:"Syne","Inter",system-ui,sans-serif;
   --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Liberation Mono",monospace;
@@ -28,14 +36,12 @@ body{
   font-family:var(--sans);font-size:17px;line-height:1.62;
   font-weight:400;letter-spacing:-0.005em;
   -webkit-font-smoothing:antialiased;
-  background-image:
-    radial-gradient(1100px 520px at 50% -12%,rgba(76,154,255,.13),transparent 72%),
-    radial-gradient(760px 420px at 92% 4%,rgba(240,180,41,.05),transparent 70%);
+  background-image:radial-gradient(1200px 560px at 50% -18%,rgba(176,62,0,.045),transparent 74%);
   background-repeat:no-repeat;
 }
 img,svg{max-width:100%;display:block}
 a{color:var(--blue);text-decoration:none}
-a:hover{color:var(--gold)}
+a:hover{color:var(--blue-deep)}
 p{margin:0 0 1.05em}
 p,li,td,th,.label,.reading__meta,.aside__meta,.foot__meta{overflow-wrap:break-word}
 p:last-child{margin-bottom:0}
@@ -55,7 +61,7 @@ li:last-child{margin-bottom:0}
 .skip:focus{left:0;top:0;color:var(--navy);outline:2px solid var(--ink);outline-offset:2px}
 
 /* masthead */
-.masthead{position:sticky;top:0;z-index:40;background:rgba(7,11,24,.88);
+.masthead{position:sticky;top:0;z-index:40;background:rgba(247,243,234,.92);
   -webkit-backdrop-filter:saturate(140%) blur(10px);backdrop-filter:saturate(140%) blur(10px);
   border-bottom:1px solid var(--line)}
 .masthead__in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
@@ -63,11 +69,11 @@ li:last-child{margin-bottom:0}
 .mark__name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:.06em;text-transform:uppercase}
 .mark__prog{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
   color:var(--blue);border:1px solid var(--line-strong);border-radius:2px;padding:3px 6px}
-.mark:hover .mark__name{color:var(--gold)}
+.mark:hover .mark__name{color:var(--blue)}
 .nav{display:flex;align-items:center;gap:28px}
 .nav a{color:var(--muted);font-size:14.5px;font-weight:500;min-height:44px;display:inline-flex;align-items:center;
   border-bottom:1px solid transparent;transition:color var(--t),border-color var(--t)}
-.nav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--blue)}
 .nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--blue)}
 .navtoggle{display:none;min-height:44px;min-width:44px;padding:0 12px;background:transparent;color:var(--ink);
   border:1px solid var(--line-strong);border-radius:2px;font:600 13px/1 var(--sans);letter-spacing:.04em;cursor:pointer}
@@ -100,10 +106,12 @@ li:last-child{margin-bottom:0}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;
   background:var(--gold);color:var(--navy);font:600 15px/1 var(--sans);letter-spacing:.01em;border-radius:2px;
   transition:background var(--t),transform var(--t)}
-.btn:hover{background:#FFC857;color:var(--navy)}
+.btn:hover{background:#332C22;color:var(--navy)}
 .btn:active{transform:translateY(1px)}
-.link{color:var(--blue);border-bottom:1px solid rgba(76,154,255,.45);padding-bottom:1px;transition:color var(--t),border-color var(--t)}
-.link:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.link{color:var(--blue);border-bottom:1px solid rgba(176,62,0,.45);padding-bottom:1px;transition:color var(--t),border-color var(--t)}
+.link:hover{color:var(--blue-deep);border-bottom-color:var(--blue-deep)}
+.hero__cta .link,.cta .link{min-height:44px;display:inline-flex;align-items:center}
+.link--solo{min-height:44px;display:inline-flex;align-items:center}
 .link--lg{font-family:var(--display);font-weight:700;font-size:clamp(1.05rem,2vw,1.4rem);letter-spacing:-.01em;display:inline-flex;align-items:center;min-height:44px}
 
 /* bands */
@@ -134,7 +142,7 @@ li:last-child{margin-bottom:0}
 .card__t{font-size:1.32rem;margin:2px 0 0}
 .card__d{color:var(--muted);font-size:15px;margin:0;max-width:40ch}
 .card__go{margin-top:auto;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
-.card:hover .card__go{color:var(--gold)}
+.card:hover .card__go{color:var(--blue-deep)}
 @media (max-width:819px){.cards{grid-template-columns:minmax(0,1fr)}.card{min-height:0}}
 
 /* definitions */
@@ -160,15 +168,15 @@ li:last-child{margin-bottom:0}
 /* split + prose + aside */
 .split{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:56px;align-items:start}
 .prose p{max-width:62ch}
-.aside{background:var(--surface);border:1px solid var(--line);border-left:2px solid var(--gold);
+.aside{background:var(--surface);border:1px solid var(--line);border-left:2px solid var(--blue);
   border-radius:2px;padding:24px 24px 26px}
 .aside p{font-size:15px;color:var(--ink)}
-.aside .label{color:var(--gold)}
+.aside .label{color:var(--blue)}
 .aside__meta{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.6}
 @media (max-width:899px){.split{grid-template-columns:minmax(0,1fr);gap:34px}}
 
 /* notes + neutral */
-.note{margin-top:26px;border-left:2px solid var(--blue);background:rgba(76,154,255,.06);
+.note{margin-top:26px;border-left:2px solid var(--blue);background:rgba(176,62,0,.06);
   padding:16px 20px;color:var(--ink);font-size:15px;max-width:78ch}
 .neutral{border:1px dashed var(--line-strong);border-radius:2px;padding:22px 24px;max-width:88ch;background:transparent}
 .neutral p{color:var(--muted);font-size:15px}
@@ -182,7 +190,7 @@ li:last-child{margin-bottom:0}
 .plain{list-style:none;padding:0;margin:0}
 .plain li{margin:0 0 9px}
 .plain a{color:var(--muted);border-bottom:1px solid transparent;display:inline-flex;align-items:center;min-height:44px}
-.plain a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.plain a:hover{color:var(--ink);border-bottom-color:var(--blue)}
 
 /* tables */
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:2px;background:var(--surface)}
@@ -193,7 +201,7 @@ li:last-child{margin-bottom:0}
 .reg td{padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink)}
 .reg tr:last-child td{border-bottom:0}
 .reg .st{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
-.reg .word{color:var(--gold);font-weight:600}
+.reg .word{color:var(--blue);font-weight:600}
 @media (max-width:639px){
   .reg thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .reg,.reg tbody,.reg tr,.reg td{display:block;width:100%}
@@ -217,7 +225,7 @@ li:last-child{margin-bottom:0}
 @media (max-width:819px){.cta{grid-template-columns:minmax(0,1fr);gap:26px;padding:32px 24px}}
 
 /* footer */
-.foot{border-top:1px solid var(--line);background:rgba(13,20,40,.55)}
+.foot{border-top:1px solid var(--line);background:rgba(241,236,224,.65)}
 .foot__in{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);gap:48px;padding-block:56px 64px}
 .foot__col p,.foot__col li{font-size:14px;color:var(--muted)}
 .foot__col .label{margin-bottom:14px}
@@ -228,3 +236,73 @@ li:last-child{margin-bottom:0}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:0s!important;animation-duration:0s!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
 }
+
+/* ============================================================
+   ZYPHONOS — THE DARK INSTRUMENT ROOM
+   The one room inside the Field Station shell that is not paper.
+   Scope: .theme-zyphonos only. Nothing here reaches any other page.
+   --muted #8A8272 = 4.72:1 on the void (the 2026-11-09 contrast fix).
+   ============================================================ */
+.theme-zyphonos{
+  --navy:#070B18;
+  --surface:#0D1428;
+  --surface-2:#141C33;
+  --ink:#EAF0FF;
+  --muted:#8A8272;
+  --blue:#4C9AFF;
+  --blue-deep:#7FB6FF;
+  --gold:#F0B429;
+  --line:rgba(234,240,255,.10);
+  --line-strong:rgba(234,240,255,.22);
+  background-image:
+    radial-gradient(1100px 520px at 50% -12%,rgba(76,154,255,.13),transparent 72%),
+    radial-gradient(760px 420px at 92% 4%,rgba(240,180,41,.05),transparent 70%);
+}
+.theme-zyphonos .masthead{background:rgba(7,11,24,.88)}
+.theme-zyphonos .foot{background:rgba(13,20,40,.55)}
+.theme-zyphonos .btn{background:#F0B429;color:#070B18}
+.theme-zyphonos .btn:hover{background:#FFC857;color:#070B18}
+.theme-zyphonos .skip{background:#F0B429;color:#070B18}
+.theme-zyphonos .link{border-bottom-color:rgba(76,154,255,.45)}
+.theme-zyphonos .link:hover{border-bottom-color:#7FB6FF;color:#7FB6FF}
+.theme-zyphonos .note{background:rgba(76,154,255,.06)}
+.theme-zyphonos .def,.theme-zyphonos .route{background:#070B18}
+
+/* ============================================================
+   WILLWIRED - TRIAL SKIN (NOT an approved brand system)
+   Source: Muktad, 2026-11-13. Values estimated by eye from a compressed JPG,
+   so they are close but not exact; spelling of the footer label unconfirmed.
+   Scope: .theme-willwired only. Nothing here reaches any other page.
+   Contrast law: the signal accent #F4451C measures 3.38:1 on cream, so it is
+   used ONLY for large text (>=3:1) and non-text graphics. Body copy and small
+   links use the text-grade accent #B8310D (5.55:1 on cream).
+   ============================================================ */
+.theme-willwired{
+  --navy:#FBF5E8;
+  --surface:#F6EEDC;
+  --surface-2:#F1E7D1;
+  --ink:#1A0A08;
+  --muted:#2A1D18;
+  --blue:#B8310D;
+  --blue-deep:#A82C0B;
+  --gold:#F4451C;
+  --line:#E4D7BD;
+  --line-strong:#CDBB98;
+  background-image:none;
+}
+.theme-willwired .btn{background:#F4451C;color:#1A0A08}
+.theme-willwired .btn:hover{background:#FF5A32;color:#1A0A08}
+.theme-willwired .skip{background:#F4451C;color:#1A0A08}
+.theme-willwired .link{border-bottom-color:rgba(184,49,13,.45)}
+.theme-willwired .link:hover,
+.theme-willwired .nav a:hover,
+.theme-willwired .mark:hover .mark__name,
+.theme-willwired .plain a:hover{color:#1A0A08;border-bottom-color:#F4451C}
+.theme-willwired .hero__label{color:#B8310D}
+.theme-willwired .aside{border-left-color:#F4451C}
+.theme-willwired .aside .label{color:#B8310D}
+.theme-willwired .card__go{color:#B8310D}
+.theme-willwired .card:hover .card__go{color:#1A0A08}
+.theme-willwired .masthead{background:rgba(251,245,232,.92)}
+.theme-willwired .foot{background:#F6EEDC}
+.theme-willwired .navtoggle:hover{border-color:#B8310D}

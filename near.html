@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEAR Agent Wallet &middot; AOSI</title>
+<meta name="description" content="A payment policy gate for AI agents: five rules, a chain-enforced key, and hash-chained receipts. Built and verified on NEAR testnet.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/syne-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="NEAR Agent Wallet &middot; AOSI">
+<meta property="og:description" content="A payment policy gate for AI agents: five rules, a chain-enforced key, and hash-chained receipts.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aosihq.github.io/near.html">
+<link rel="canonical" href="https://aosihq.github.io/near.html">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="mark" href="index.html"><span class="mark__name">AOSI</span><span class="mark__prog">Lagos</span></a>
+    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="ecosystem.html">Ecosystem</a><a href="near.html" aria-current="page">NEAR</a><a href="work.html">Work</a><a href="vision.html">Vision</a><a href="participate.html">Participate</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="wrap hero hero--sm">
+  <p class="label hero__label">Member 05 &middot; agent money &middot; built 2026-11</p>
+  <h1 class="display display--sm">A wallet an agent can hold.</h1>
+  <p class="lead">If you give an AI agent money, the first question anyone with money asks is what
+  stops it draining the account. This is the answer, in two layers that do not depend on each
+  other.</p>
+  <p class="hero__cta"><a class="btn" href="contact.html">Ask about it</a>
+  <a class="link" href="ecosystem.html">See all members &rarr;</a></p>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Layer one &middot; the software gate</p>
+    <h2 class="h2">Five rules before a payment is allowed to exist.</h2>
+  </div>
+  <div class="defs defs--3">
+    <div class="def"><p class="def__t">Within budget</p><p>A payment over the stated ceiling is refused as <strong>OVER_BUDGET</strong>.</p></div>
+    <div class="def"><p class="def__t">Evidence exists</p><p>A spend with nothing behind it is refused as <strong>NO_EVIDENCE</strong>.</p></div>
+    <div class="def"><p class="def__t">Recipient allowed</p><p>A payment to anyone off the list is refused as <strong>RECIPIENT_NOT_ALLOWED</strong>.</p></div>
+    <div class="def"><p class="def__t">Purpose specific</p><p>A vague reason is refused as <strong>PURPOSE_TOO_VAGUE</strong>.</p></div>
+    <div class="def"><p class="def__t">Amount real</p><p>Zero or negative is refused as <strong>AMOUNT_NOT_POSITIVE</strong>.</p></div>
+    <div class="def"><p class="def__t">Exact arithmetic</p><p>Amounts are computed in decimal, not floating point. One half of a NEAR token becomes exactly 500000000000000000000000 yoctoNEAR, never a rounding artefact.</p></div>
+  </div>
+  <p class="note">A refusal is not a crash. It is a named outcome with a reason attached, written to
+  the same record as an approval. The gate is tested in both directions: honest payments pass,
+  every violation above is refused.</p>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Layer two &middot; the chain-enforced key</p>
+    <h2 class="h2">Even if the software is bypassed, the chain still refuses.</h2>
+  </div>
+  <div class="split">
+    <div class="prose">
+      <p>The key the agent holds is scoped at the protocol level. It may call one function on one
+      contract, up to one allowance. It cannot send anywhere else, and it cannot exceed the
+      ceiling, because the network enforces those limits rather than our code.</p>
+      <p>That matters because a software gate is a promise and a scoped key is a constraint. A
+      promise can be patched around. A constraint held by the chain cannot.</p>
+      <p>This was verified on NEAR testnet, not assumed: the account exists, the scoped key exists,
+      and the stored allowance, method name and receiver match what the builder produces.</p>
+    </div>
+    <aside class="aside">
+      <p class="label">Verified on testnet</p>
+      <p>Account created, funded, and a function-call key added with a fixed allowance, a single
+      permitted method and a single permitted receiver.</p>
+      <p class="aside__meta">Network: NEAR testnet &middot; read 2026-11-14. No mainnet key is
+      published here and none should be.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Layer three &middot; the receipt</p>
+    <h2 class="h2">A record that cannot be quietly edited.</h2>
+  </div>
+  <div class="prose">
+    <p>Every approved payment writes a receipt, and every receipt carries the hash of the one
+    before it. Edit a receipt and the chain breaks. Remove one and the chain breaks. Anyone
+    holding the file can check it without trusting the party that produced it.</p>
+    <p>That is the difference between a log and a record. A log says what someone wrote down. A
+    record can prove it was not rewritten afterwards.</p>
+  </div>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Status</p>
+    <h2 class="h2">What is real, and what is not yet.</h2>
+  </div>
+  <div class="readings">
+    <div class="reading"><p class="reading__label">Policy rules enforced</p><p class="reading__value">5</p><p class="reading__meta">near-agent-wallet &middot; 21 tests passing &middot; read 2026-11-14</p></div>
+    <div class="reading"><p class="reading__label">Chain verification</p><p class="reading__value">Testnet</p><p class="reading__meta">scoped key confirmed on chain &middot; read 2026-11-14</p></div>
+    <div class="reading"><p class="reading__label">Paying customers</p><p class="reading__value">0</p><p class="reading__meta">state/revenue/ledger.jsonl &middot; read 2026-11-14</p></div>
+  </div>
+  <p class="note">This member is new. The architecture is real and verified; the demand is not.
+  Nobody has paid for it and no one has asked to. It is stated that way on purpose.</p>
+</section>
+
+<section class="wrap band">
+  <div class="band__head">
+    <p class="label">Why it belongs here</p>
+    <h2 class="h2">It is plumbing under the other members, not a shop next door.</h2>
+  </div>
+  <ul class="list">
+    <li>If ZyphonOS sells an agent that touches money, this is what makes it sellable.</li>
+    <li>If Pikkaio takes a fee on what it closes, this is what lets the fee be collected without a human standing there.</li>
+    <li>If the ecosystem ever holds funds on behalf of anyone, this is the layer that makes that defensible rather than hopeful.</li>
+  </ul>
+</section>
+
+<section class="wrap band band--cta">
+  <div class="cta">
+    <div>
+      <p class="label">One front door</p>
+      <h2 class="h2">Building agents that spend? Start with a conversation.</h2>
+      <p class="lead lead--sm">No price is published here, because a price without a scope is a
+      guess. Write first and the scope comes first.</p>
+    </div>
+    <p class="cta__go"><a class="link link--lg" href="contact.html">Contact &rarr;</a></p>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__col">
+      <p class="label">This site</p>
+      <p>AOSI is the roof. The agents built under it are participants, not output: they research
+      the basecode, build the ecosystem and generate its revenue. ZyphonOS is the factory, Pikkaio
+      the shopfront, WillWired the power, EBVKA the voice, NEAR the guardrail. Every relationship
+      on this site is labelled with the word that is legally true.</p>
+      <p class="foot__meta">Content read 2026-11-14. No claim on this site is a forecast.</p>
+    </div>
+    <div class="foot__col">
+      <p class="label">Pages</p>
+      <ul class="plain">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ecosystem.html">Ecosystem</a></li>
+        <li><a href="zyphonos.html">ZyphonOS</a></li>
+        <li><a href="pikkaio.html">Pikkaio</a></li>
+        <li><a href="willwired.html">WillWired</a></li>
+        <li><a href="ebvka.html">EBVKA</a></li>
+        <li><a href="near.html">NEAR Agent Wallet</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <p class="label">Routes</p>
+      <ul class="plain">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="participate.html">Participate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="foot__meta">Direct addresses are published on the contact page only, and only
+      where they are confirmed working.</p>
+    </div>
+  </div>
+</footer>
+<script src="nav.js" defer></script>
+</body>
+</html>
